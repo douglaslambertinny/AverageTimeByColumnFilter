@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanboard\Plugin\AnalyticCustom\Analytics;
+namespace Kanboard\Plugin\AverageTimeByColumnFilter\Analytics;
 
 use Kanboard\Analytic\AverageTimeSpentColumnAnalytic;
 use Kanboard\Model\TaskModel;

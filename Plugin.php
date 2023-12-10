@@ -10,7 +10,7 @@ class Plugin extends Base
     public function initialize()
     {
         $this->route->addRoute('analytics/average-time-column/:project_id', 'AnalyticControllerFilter', 'averageTimeByColumn', 'AverageTimeByColumnFilter');
-        $this->template->hook->attach("template:analytic:sidebar","AnalyticCustom:analytic/sidebar");
+        $this->template->hook->attach("template:analytic:sidebar","AverageTimeByColumnFilter:analytic/sidebar");
     }
 
     public function onStartup()
@@ -21,7 +21,7 @@ class Plugin extends Base
     public function getClasses()
     {
         return [
-            'Plugin\AnalyticCustom\Analytics' => [
+            'Plugin\AverageTimeByColumnFilter\Analytics' => [
                 'AverageTimeSpentColumnAnalyticFilter',
             ],
         ];
