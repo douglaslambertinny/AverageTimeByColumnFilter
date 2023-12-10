@@ -34,7 +34,7 @@ class AnalyticControllerFilter extends AnalyticController
     private function getDates()
     {
     $values = $this->request->getValues();
-    $from = $this->request->getStringParam('from', date('Y-m-d', strtotime('-2years')));
+    $from = $this->request->getStringParam('from', date('Y-m-d', strtotime('-1month')));
     $to = $this->request->getStringParam('to', date('Y-m-d'));
     $values += array(
         'from' => $from,
