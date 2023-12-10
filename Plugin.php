@@ -13,10 +13,10 @@ class Plugin extends Base
         $this->template->hook->attach("template:analytic:sidebar","AnalyticCustom:analytic/sidebar");
     }
 
-    // public function onStartup()
-    // {
-    //     Translator::load($this->languageModel->getCurrentLanguage(), __DIR__ . '/Locale');
-    // }
+    public function onStartup()
+    {
+        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__ . '/Locale');
+    }
 
     public function getClasses()
     {
