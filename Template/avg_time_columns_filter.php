@@ -7,7 +7,7 @@
 <?php if (empty($metrics)) : ?>
 
     <p class="alert"><?= t('Not enough data to show the graph.') ?></p>
-    <form method="post" class="form-inline" action="<?= $this->url->href('AnalyticControllerFilter', 'averageTimeByColumnCustom', array('plugin' => 'AverageTimeByColumnFilter','project_id' => $project['id'])) ?>" autocomplete="off">
+    <form method="post" class="form-inline" action="<?= $this->url->href('AnalyticControllerFilter', 'averageTimeByColumnFilter', array('plugin' => 'AverageTimeByColumnFilter','project_id' => $project['id'])) ?>" autocomplete="off">
         <?= $this->form->csrf() ?>
         <!-- Set value default values -->
         <?= $this->form->date(t('Start date'), 'from', $values) ?>
@@ -38,7 +38,7 @@
 
     <?php 
     ?>
-    <form method="post" class="form-inline" action="<?= $this->url->href('AnalyticControllerFilter', 'averageTimeByColumnCustom', array('plugin' => 'AverageTimeByColumnFilter', 'project_id' => $project['id'])) ?>" autocomplete="off">
+    <form method="post" class="form-inline" action="<?= $this->url->href('AnalyticControllerFilter', 'averageTimeByColumnFilter', array('plugin' => 'AverageTimeByColumnFilter', 'project_id' => $project['id'])) ?>" autocomplete="off">
         <?= $this->form->csrf() ?>
         <?= $this->form->date(t('Start date'), 'from', $values) ?>
         <?= $this->form->date(t('End date'), 'to', $values) ?>

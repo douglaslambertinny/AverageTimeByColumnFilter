@@ -3,13 +3,13 @@
 namespace Kanboard\Plugin\AverageTimeByColumnFilter;
 
 use Kanboard\Core\Plugin\Base;
-use Kanboard\Plugin\AnalyticCustom\Analytics\AverageTimeSpentColumnAnalyticFilter;
+use Kanboard\Core\Translator;
 
 class Plugin extends Base 
 {
     public function initialize()
     {
-        $this->route->addRoute('analytics/average-time-column/:project_id', 'AnalyticControllerFilter', 'averageTimeByColumn', 'AnalyticCustom');
+        $this->route->addRoute('analytics/average-time-column/:project_id', 'AnalyticControllerFilter', 'averageTimeByColumn', 'AverageTimeByColumnFilter');
         $this->template->hook->attach("template:analytic:sidebar","AnalyticCustom:analytic/sidebar");
     }
 

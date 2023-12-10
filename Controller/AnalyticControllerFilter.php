@@ -11,14 +11,14 @@ class AnalyticControllerFilter extends AnalyticController
      *
      * @access public
      */
-    public function averageTimeByColumnCustom()
+    public function averageTimeByColumnFilter()
     {   
 
         $project = $this->getProject();
         list($from, $to) = $this->getDates();
         $limit = $this->request->getIntegerParam('limit', 4000);
         $this->response->html(
-            $this->helper->layout->analytic('AnalyticCustom:avg_time_columns_custom', array(
+            $this->helper->layout->analytic('AverageTimeByColumnFilter:avg_time_columns_filter', array(
                 'values' => array(
                     'from' => $from,
                     'to' => $to,
