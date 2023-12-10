@@ -46,4 +46,8 @@ class Plugin extends Base
         return '1.0.0';
     }
 
+    public function getPluginHomepage()
+    {
+        return 'https://github.com/douglaslambertinny/AverageTimeByColumnFilter';
+    }
 }
